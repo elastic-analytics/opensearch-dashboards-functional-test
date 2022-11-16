@@ -162,9 +162,9 @@ describe('Testing a panel', () => {
       .click();
     cy.wait(delay);
     cy.get('.euiBreadcrumb').contains('Explorer').should('exist');
-    cy.get('.euiCallOut')
-      .contains('No results match your search criteria')
-      .should('exist');
+    // cy.get('.euiCallOut')
+    //   .contains('No results match your search criteria')
+    //   .should('exist');
   });
 
   it('Redirects to correct page on breadcrumb click', () => {
