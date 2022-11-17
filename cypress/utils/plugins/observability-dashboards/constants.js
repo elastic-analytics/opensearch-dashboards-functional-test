@@ -333,7 +333,7 @@ export const deleteAllSavedApplications = () => {
 export const uniqueId = Date.now();
 export const baseQuery = 'source = opensearch_dashboards_sample_data_flights';
 export const nameOne = `sample-${uniqueId}`;
-export const description = 'This is my application for cypress testing.';
+export const description = 'This is sample application.';
 export const trace_one = 'HTTP POST';
 export const trace_two = 'HTTP GET';
 export const trace_three = 'client_pay_order';
