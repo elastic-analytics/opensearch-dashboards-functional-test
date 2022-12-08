@@ -106,10 +106,10 @@ describe('Creates an Moviegeek application', () => {
       .click();
     // cy.get('[data-test-subj="createButton"]').should('not.be.disabled');
     // cy.get('[data-test-subj="createAndSetButton"]').should('be.disabled');
-    expectMessageOnHover(
-      'createAndSetButton',
-      'Log source is required to set availability.'
-    );
+    // expectMessageOnHover(
+    //   'createAndSetButton',
+    //   'Log source is required to set availability.'
+    // );
     cy.get('[data-test-subj="searchAutocompleteTextArea"]', {
       timeout: TIMEOUT_DELAY,
     })
