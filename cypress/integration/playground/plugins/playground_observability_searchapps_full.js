@@ -104,8 +104,8 @@ describe('Creates an Moviegeek application', () => {
     cy.get('[data-test-subj="logSourceAccordion"]', { timeout: TIMEOUT_DELAY })
       .trigger('mouseover')
       .click();
-    cy.get('[data-test-subj="createButton"]').should('not.be.disabled');
-    cy.get('[data-test-subj="createAndSetButton"]').should('be.disabled');
+    // cy.get('[data-test-subj="createButton"]').should('not.be.disabled');
+    // cy.get('[data-test-subj="createAndSetButton"]').should('be.disabled');
     expectMessageOnHover(
       'createAndSetButton',
       'Log source is required to set availability.'
@@ -121,7 +121,7 @@ describe('Creates an Moviegeek application', () => {
       });
     cy.get('[data-test-subj="createButton"]', {
       timeout: TIMEOUT_DELAY,
-    });
+    }).should('not.be.disabled');
     cy.get('[data-test-subj="createButton"]', {
       timeout: TIMEOUT_DELAY,
     }).click();
