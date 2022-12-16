@@ -7,15 +7,12 @@ import {
   SECURITY_ANALYTICS_TEST_FIELD_MAPPINGS,
   TWENTY_SECONDS_TIMEOUT,
 } from '../../../utils/constants';
+import { BASE_PATH } from '../../../utils/base_constants';
 
 describe('Detectors', () => {
   before(() => {
     //create rule
-    cy.visit(
-      `${Cypress.env(
-        'opensearch_dashboards'
-      )}/app/${SECURITY_ANALYTICS_PLUGIN_NAME}#/rules`
-    );
+    cy.visit(`${BASE_PATH}/app/${SECURITY_ANALYTICS_PLUGIN_NAME}#/rules`);
 
     // Click "create new rule" button
     cy.get(
@@ -201,11 +198,7 @@ describe('Detectors', () => {
     cy.contains(`[data-test-subj="rule_flyout_${SAMPLE_RULE.name}"]`).should(
       'not.exist'
     );
-    cy.visit(
-      `${Cypress.env(
-        'opensearch_dashboards'
-      )}/app/${SECURITY_ANALYTICS_PLUGIN_NAME}#/detectors`
-    );
+    cy.visit(`${BASE_PATH}/app/${SECURITY_ANALYTICS_PLUGIN_NAME}#/detectors`);
     //wait for page to load
     cy.wait(10000);
 
