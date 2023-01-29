@@ -80,12 +80,12 @@ describe('Test create channels', () => {
     cy.get('[data-test-subj="create-recipient-group-form-name-input"]').type(
       'sample recipient group region2'
     );
-    cy.get(
-      '[data-test-subj="create-recipient-group-form-description-input"]'
-    ).type('recipient group created while creating email channel.');
     cy.get('[data-test-subj="comboBoxInput"]')
       .last()
       .type('custom.email@sample.com{enter}');
+    cy.get(
+      '[data-test-subj="create-recipient-group-form-description-input"]'
+    ).type('recipient group created while creating email channel.');
     cy.wait(delay);
     cy.get(
       '[data-test-subj="create-recipient-group-modal-create-button"]'
