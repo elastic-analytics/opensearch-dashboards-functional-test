@@ -34,6 +34,13 @@ export const testIndexDataSet = [
       'https://raw.githubusercontent.com/opensearch-project/observability/main/dashboards-observability/.cypress/utils/otel-v1-apm-span-000002.json',
     index: 'otel-v1-apm-span-000002',
   },
+  {
+    mapping_url:
+      'https://raw.githubusercontent.com/Swiddis/observability/nginx_integration_bundle/integrations/nginx/playground/logs.mapping.json',
+    data_url:
+      'https://raw.githubusercontent.com/Swiddis/observability/nginx_integration_bundle/integrations/nginx/playground/bulk_logs.json',
+    index: 'sso_logs-nginx-prod',
+  },
 ];
 
 export const moviegeekDataSet = [
