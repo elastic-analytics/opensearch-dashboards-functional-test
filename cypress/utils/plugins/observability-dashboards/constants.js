@@ -43,6 +43,16 @@ export const testIndexDataSet = [
   },
 ];
 
+export const NginxLogDataSet = [
+  {
+    mapping_url:
+      'https://raw.githubusercontent.com/Swiddis/observability/nginx_integration_bundle/integrations/nginx/playground/logs.mapping.json',
+    data_url:
+      'https://raw.githubusercontent.com/Swiddis/observability/nginx_integration_bundle/integrations/nginx/playground/bulk_logs.json',
+    index: 'sso_logs-nginx-prod',
+  },
+];
+
 export const moviegeekDataSet = [
   {
     moviegeek_url:
