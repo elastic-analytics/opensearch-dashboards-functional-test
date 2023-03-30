@@ -36,6 +36,23 @@ export const testIndexDataSet = [
   },
 ];
 
+export const jaegerTestDataSet = [
+  {
+    mapping_url:
+      'https://raw.githubusercontent.com/opensearch-project/dashboards-observability/main/.cypress/utils/jaeger-service-2023-01-24-mappings.json',
+    data_url:
+      'https://raw.githubusercontent.com/opensearch-project/dashboards-observability/main/.cypress/utils/jaeger-service-2023-01-24.json',
+    index: 'jaeger-service-2023-01-24',
+  },
+  {
+    mapping_url:
+      'https://raw.githubusercontent.com/opensearch-project/dashboards-observability/main/.cypress/utils/jaeger-span-2023-01-24-mappings.json',
+    data_url:
+      'https://raw.githubusercontent.com/opensearch-project/dashboards-observability/main/.cypress/utils/jaeger-span-2023-01-24.json',
+    index: 'jaeger-span-2023-01-24',
+  },
+];
+
 export const supressResizeObserverIssue = () => {
   // exception is thrown on loading EuiDataGrid in cypress only, ignore for now
   cy.on('uncaught:exception', (err) => {
