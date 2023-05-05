@@ -29,7 +29,7 @@ describe('Before', () => {
       cy.request(mapping_url).then((response) => {
         cy.request({
           method: 'POST',
-          form: true,
+          form: false,
           url: 'api/console/proxy',
           headers: {
             'content-type': 'application/json;charset=UTF-8',
@@ -46,7 +46,7 @@ describe('Before', () => {
       cy.request(data_url).then((response) => {
         cy.request({
           method: 'POST',
-          form: true,
+          form: false,
           url: 'api/console/proxy',
           headers: {
             'content-type': 'application/json;charset=UTF-8',
