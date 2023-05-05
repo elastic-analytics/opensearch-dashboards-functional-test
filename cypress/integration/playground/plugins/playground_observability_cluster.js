@@ -37,7 +37,7 @@ describe('Adds moviegeek related stuff', () => {
       cy.request(moviegeek_url).then((response) => {
         cy.request({
           method: 'POST',
-          form: true,
+          form: false,
           url: 'api/console/proxy',
           headers: {
             'content-type': 'application/json;charset=UTF-8',

@@ -288,12 +288,11 @@ export const moveToHomePage = () => {
 };
 
 export const moveToCreatePage = () => {
-  cy.visit(
-    `${BASE_PATH}/app/observability-dashboards#/application_analytics/`,
-    { waitForGetTenant: false }
-  );
+  cy.visit(`${BASE_PATH}/app/observability-applications#`, {
+    waitForGetTenant: true,
+  });
   cy.wait(delayTime * 2);
-  cy.get('.euiButton[href="#/application_analytics/create"]', {
+  cy.get('.euiButton[href="#/create"]', {
     timeout: TIMEOUT_DELAY,
   })
     .eq(0)
