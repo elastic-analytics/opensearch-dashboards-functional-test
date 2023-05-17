@@ -184,8 +184,24 @@ export const querySearch = (query, rangeSelected) => {
 };
 
 export const landOnEventHome = () => {
-  cy.visit(`${BASE_PATH}/app/observability-dashboards#/event_analytics`);
+  cy.visit(`${BASE_PATH}/app/observability-logs#`);
   cy.wait(delayTime);
+};
+
+export const moveToEventsHome = () => {
+  cy.visit(`${BASE_PATH}/app/observability-logs#/`);
+  cy.wait(delayTime * 3);
+};
+
+export const moveToNotebook = () => {
+  cy.visit(`${BASE_PATH}/app/observability-notebooks#/`, {
+    timeout: delayTime * 3,
+  });
+};
+
+export const moveToPanelHome = () => {
+  cy.visit(`${BASE_PATH}/app/observability-dashboards#/`);
+  cy.wait(delayTime * 3);
 };
 
 export const landOnEventExplorer = () => {
@@ -264,12 +280,11 @@ export const moveToHomePage = () => {
 };
 
 export const moveToCreatePage = () => {
-  cy.visit(
-    `${BASE_PATH}/app/observability-dashboards#/application_analytics/`,
-    { waitForGetTenant: false }
-  );
+  cy.visit(`${BASE_PATH}/app/observability-applications#`, {
+    waitForGetTenant: false,
+  });
   cy.wait(delayTime * 2);
-  cy.get('.euiButton[href="#/application_analytics/create"]', {
+  cy.get('.euiButton[href="#/create"]', {
     timeout: TIMEOUT_DELAY,
   })
     .eq(0)
@@ -282,10 +297,9 @@ export const moveToCreatePage = () => {
 };
 
 export const moveToApplication = (name) => {
-  cy.visit(
-    `${BASE_PATH}/app/observability-dashboards#/application_analytics/`,
-    { waitForGetTenant: false }
-  );
+  cy.visit(`${BASE_PATH}/app/observability-applications#`, {
+    waitForGetTenant: true,
+  });
   supressResizeObserverIssue();
   cy.wait(delayTime * 2);
   cy.get(`[data-test-subj="${name}ApplicationLink"]`, {
@@ -330,11 +344,6 @@ export const changeTimeTo24 = (timeUnit) => {
 export const expectMessageOnHover = (button, message) => {
   cy.get(`[data-test-subj="${button}"]`).click({ force: true });
   cy.get('.euiToolTipPopover').contains(message).should('exist');
-};
-
-export const moveToPanelHome = () => {
-  cy.visit(`${BASE_PATH}/app/observability-dashboards#/operational_panels/`);
-  cy.wait(delayTime * 3);
 };
 
 export const deleteAllSavedApplications = () => {
