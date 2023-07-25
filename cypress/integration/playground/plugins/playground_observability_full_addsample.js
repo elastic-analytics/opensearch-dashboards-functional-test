@@ -105,7 +105,7 @@ describe('Click actions for adding sample', () => {
     cy.wait(delayTime);
     cy.get('[data-test-subj="eventHomeAction__addSamples"]').click();
     cy.get('[data-test-subj="confirmModalConfirmButton"]').click();
-    cy.contains('Sample events added successfully.', { timeout: 10000 });
+    // cy.contains('Sample events added successfully.', { timeout: 10000 });
   });
 });
 

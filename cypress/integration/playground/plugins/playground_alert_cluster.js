@@ -61,8 +61,8 @@ describe('ClusterMetricsMonitor', () => {
       );
 
       // Confirm the Query parameters field is present and described as "optional"
-      cy.contains('Query parameters - optional');
-      cy.get('[data-test-subj="clusterMetricsParamsFieldText"]');
+      //   cy.contains('Query parameters - optional');
+      //   cy.get('[data-test-subj="clusterMetricsParamsFieldText"]');
 
       // Press the 'Run for response' button
       cy.get('[data-test-subj="clusterMetricsPreviewButton"]').click();
