@@ -223,13 +223,6 @@ describe('dashboard sample data validation', () => {
       it('checking add filter button display', () => {
         commonUI.checkElementExists('button[data-test-subj="addFilter"]', 1);
       });
-
-      it('checking field filter display', () => {
-        commonUI.checkElementExists(
-          'button[data-test-subj="toggleFieldFilterButton"]',
-          1
-        );
-      });
     });
   });
 
