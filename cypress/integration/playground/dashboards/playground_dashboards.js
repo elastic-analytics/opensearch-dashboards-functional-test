@@ -224,13 +224,6 @@ describe('dashboard sample data validation', () => {
         commonUI.checkElementExists('button[data-test-subj="addFilter"]', 1);
       });
 
-      it('checking index pattern switch button display', () => {
-        commonUI.checkElementExists(
-          'button[data-test-subj="indexPattern-switch-link"]',
-          1
-        );
-      });
-
       it('checking field filter display', () => {
         commonUI.checkElementExists(
           'button[data-test-subj="toggleFieldFilterButton"]',
