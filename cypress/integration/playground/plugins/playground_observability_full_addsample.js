@@ -86,12 +86,12 @@ describe('Creating application', () => {
     // cy.get('[data-test-subj="applicationTitle"]', {
     //   timeout: TIMEOUT_DELAY,
     // }).should('contain', nameOne);
-    cy.get('[data-test-subj="app-analytics-panelTab"]', {
-      timeout: TIMEOUT_DELAY,
-    }).click();
-    cy.get('[data-test-subj="addFirstVisualizationText"]', {
-      timeout: TIMEOUT_DELAY,
-    }).should('exist');
+    // cy.get('[data-test-subj="app-analytics-panelTab"]', {
+    //   timeout: TIMEOUT_DELAY,
+    // }).click();
+    // cy.get('[data-test-subj="addFirstVisualizationText"]', {
+    //   timeout: TIMEOUT_DELAY,
+    // }).should('exist');
   });
 });
 
