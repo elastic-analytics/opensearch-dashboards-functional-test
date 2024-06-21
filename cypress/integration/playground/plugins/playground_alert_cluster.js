@@ -50,7 +50,7 @@ describe('ClusterMetricsMonitor', () => {
       cy.contains('Create monitor').click({ force: true });
 
       // Select ClusterMetrics radio card
-      cy.wait(10000);
+      cy.wait(20000);
       cy.get('[data-test-subj="clusterMetricsMonitorRadioCard"]').click({
         force: true,
       });
@@ -68,7 +68,6 @@ describe('ClusterMetricsMonitor', () => {
       //   cy.get('[data-test-subj="clusterMetricsParamsFieldText"]');
 
       // Press the 'Run for response' button
-      cy.wait(5000);
       cy.get('[data-test-subj="clusterMetricsPreviewButton"]').click();
 
       // Add a trigger
@@ -80,7 +79,7 @@ describe('ClusterMetricsMonitor', () => {
       );
 
       // Click the create button
-      cy.wait(20000);
+      cy.wait(10000);
       cy.get('button').contains('Create').click({ force: true });
 
       // // Click Remove action
@@ -107,7 +106,7 @@ describe('ClusterMetricsMonitor', () => {
       cy.contains('Create monitor').click();
 
       // Select ClusterMetrics radio card
-      cy.wait(10000);
+      cy.wait(20000);
       cy.get('[data-test-subj="clusterMetricsMonitorRadioCard"]').click();
 
       // Wait for input to load and then type in the monitor name
@@ -116,7 +115,6 @@ describe('ClusterMetricsMonitor', () => {
       );
 
       // Wait for the API types to load and then type in the Cluster Health API
-      cy.wait(5000);
       cy.get('[data-test-subj="clusterMetricsApiTypeComboBox"]').type(
         'nodes stats{enter}'
       );
@@ -138,7 +136,7 @@ describe('ClusterMetricsMonitor', () => {
         SAMPLE_NODE_TRIGGER
       );
 
-      cy.wait(20000);
+      cy.wait(10000);
 
       // Click the create button
       cy.get('button').contains('Create').click();
