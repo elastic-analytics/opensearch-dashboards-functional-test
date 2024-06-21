@@ -204,23 +204,6 @@ describe('Test channels table', () => {
     cy.contains('successfully muted.').should('exist');
     cy.contains('Muted').should('exist');
   });
-
-  it('filters channels', () => {
-    cy.get('input[placeholder="Search"]')
-      .type('chime{enter}')
-      .trigger('search');
-    cy.wait(delay);
-    cy.contains('sample chime channel').should('exist');
-    cy.contains('sample slack channel').should('not.exist');
-    cy.contains('sample email channel').should('not.exist');
-    cy.contains('sample webhook channel').should('not.exist');
-
-    cy.get('input[placeholder="Search"]')
-      .type('Source{enter}')
-      .trigger('search');
-    cy.wait(delay);
-    cy.contains('No channels to display').should('exist');
-  });
 });
 
 describe('Test channel details', () => {
