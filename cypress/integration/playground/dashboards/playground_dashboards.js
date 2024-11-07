@@ -23,19 +23,19 @@ describe('dashboard sample data validation', () => {
       // miscUtils.removeSampleData();
     });
 
-    // it('checking web logs dashboards displayed', () => {
-    //   miscUtils.viewData('logs');
-    //   commonUI.checkElementContainsValue(
-    //     'span[title="[Logs] Web Traffic"]',
-    //     1,
-    //     '\\[Logs\\] Web Traffic'
-    //   );
-    //   commonUI.checkElementContainsValue(
-    //     'div[data-test-subj="markdownBody"] > h3',
-    //     1,
-    //     'Sample Logs Data'
-    //   );
-    // });
+    it('checking web logs dashboards displayed', () => {
+      miscUtils.viewData('logs');
+      commonUI.checkElementContainsValue(
+        'span[title="[Logs] Web Traffic"]',
+        1,
+        '\\[Logs\\] Web Traffic'
+      );
+      commonUI.checkElementContainsValue(
+        'div[data-test-subj="markdownBody"] > h3',
+        1,
+        'Sample Logs Data'
+      );
+    });
 
     describe('checking index patterns', () => {
       before(() => {
