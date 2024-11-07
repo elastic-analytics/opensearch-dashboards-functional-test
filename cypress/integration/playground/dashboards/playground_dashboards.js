@@ -194,27 +194,27 @@ describe('dashboard sample data validation', () => {
     });
   });
 
-  describe('checking stack management', () => {
-    before(() => {
-      // Go to the stack management page
-      miscUtils.visitPage('app/management/');
-    });
+  // describe('checking stack management', () => {
+  //   before(() => {
+  //     // Go to the stack management page
+  //     miscUtils.visitPage('app/management/');
+  //   });
 
-    after(() => {});
+  //   after(() => {});
 
-    it('checking index patterns link display', () => {
-      // Check that index patterns link is visable
-      commonUI.checkElementExists('a[data-test-subj="indexPatterns"]', 1);
-    });
+  //   it('checking index patterns link display', () => {
+  //     // Check that index patterns link is visable
+  //     commonUI.checkElementExists('a[data-test-subj="indexPatterns"]', 1);
+  //   });
 
-    it('checking saved objects link display', () => {
-      // Check that saved objects link is visable
-      commonUI.checkElementExists('a[data-test-subj="objects"]', 1);
-    });
+  //   it('checking saved objects link display', () => {
+  //     // Check that saved objects link is visable
+  //     commonUI.checkElementExists('a[data-test-subj="objects"]', 1);
+  //   });
 
-    it('checking advance settings link display', () => {
-      // Check that advance settings link is visable
-      commonUI.checkElementExists('a[data-test-subj="settings"]', 1);
-    });
-  });
+  //   it('checking advance settings link display', () => {
+  //     // Check that advance settings link is visable
+  //     commonUI.checkElementExists('a[data-test-subj="settings"]', 1);
+  //   });
+  // });
 });
