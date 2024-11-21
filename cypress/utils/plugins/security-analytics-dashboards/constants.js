@@ -2,7 +2,7 @@
  * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
  */
-export const TWENTY_SECONDS_TIMEOUT = { timeout: 20000 };
+export const TWO_MIN_TIMEOUT = { timeout: 120000 };
 
 export const SECURITY_ANALYTICS_PLUGIN_NAME =
   'opensearch_security_analytics_dashboards';
